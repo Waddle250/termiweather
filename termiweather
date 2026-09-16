@@ -7,15 +7,15 @@ async def getWeather(location) -> None:
     async with python_weather.Client(unit=python_weather.IMPERIAL) as client:
         weather = await client.get(str(location))
 
-        print("Temperature: " + weather.temperature)
-        print("Precipitation: " + weather.precipitation)
-        print("Wind Speed and Direction: " + weather.wind_speed + weather.wind_direction)
-        print("Humidity: " + weather.humidity)
+        print("Temperature: " + str(weather.temperature))
+        print("Precipitation: " + str(weather.precipitation))
+        print("Wind Speed and Direction: " + str(weather.wind_speed) + " | " + str(weather.wind_direction))
+        print("Humidity: " + str(weather.humidity))
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print("Error: Please provide a location. Example: python script.py 'New York'")
-        return 1
+        sys.exit(1)
     
     location = sys.argv[1]
     asyncio.run(getWeather(location))
