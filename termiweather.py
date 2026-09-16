@@ -5,8 +5,9 @@ import sys
 async def getWeather(location) -> None:
     weather = await client.get(str(location))
 
-    print(weather.temperature)
-    print(weather.precipitation)
-    print(weather.wind speed + weather.wind_direction)
+    print("Temperature: " + weather.temperature)
+    print("Precipitation: " + weather.precipitation)
+    print("Wind Speed and Direction: " + weather.wind speed + weather.wind_direction)
+    print("Humidity: " + weather.humidity)
 
 getWeather(sys.argv[0])
