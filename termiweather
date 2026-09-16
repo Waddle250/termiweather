@@ -14,7 +14,7 @@ async def getWeather(location) -> None:
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Error: Please provide a location. Example: python script.py 'New York'")
+        print("Error: Please provide a location. Example: termiweather New York")
         sys.exit(1)
     
     location = sys.argv[1]
