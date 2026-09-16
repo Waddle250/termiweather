@@ -9,9 +9,13 @@ async def getWeather(location) -> None:
 
         print("Temperature: " + weather.temperature)
         print("Precipitation: " + weather.precipitation)
-        print("Wind Speed and Direction: " + weather.wind speed + weather.wind_direction)
+        print("Wind Speed and Direction: " + weather.wind_speed + weather.wind_direction)
         print("Humidity: " + weather.humidity)
 
 if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print("Error: Please provide a location. Example: python script.py 'New York'")
+        return 1
+    
     location = sys.argv[1]
     asyncio.run(getWeather(location))
