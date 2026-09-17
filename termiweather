@@ -11,7 +11,7 @@ async def getWeather(location) -> None:
         print("Weather for " + str(weather.location) + " at " + str(weather.datetime))
         print("It's " + str(weather.kind))
         print("")
-        print("Temperature: " + str(weather.temperature) + "Degrees Fahrenheit")
+        print("Temperature: " + str(weather.temperature) + "Degrees Fahrenheit | " + "Feels Like: " + str(weather.feels_like) + "Degrees Fahrenheit")
         print("Precipitation: " + str(weather.precipitation))
         print("Wind Speed and Direction: " + str(weather.wind_speed) + "mph | " + str(weather.wind_direction))
         print("Humidity: " + str(weather.humidity) + "%")
