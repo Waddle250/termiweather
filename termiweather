@@ -8,7 +8,7 @@ async def getWeather(location) -> None:
         weather = await client.get(str(location))
 
         print("")
-        print("Weather for " + str(weather.location) + " at " + str(weather.datetime))
+        print("Weather for " + str(weather.location) + " at " + str(weather.datetime) + ":")
         print("It's " + str(weather.kind))
         print("")
         print("Temperature: " + str(weather.temperature) + "Degrees Fahrenheit | " + "Feels Like: " + str(weather.feels_like) + "Degrees Fahrenheit")
