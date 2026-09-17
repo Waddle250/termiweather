@@ -58,7 +58,7 @@ async def getWeather(location) -> None:
         print("")
         print(f"{Color.BOLD}Weather for " + str(weather.location) + " at " + str(weather.datetime) + ":")
         print(f"{Color.RESET}{Color.BLUE}It's " + str(weather.kind))
-        print(f{Color.RESET}"")
+        print(f"{Color.RESET}")
         print(f"Temperature: " + str(weather.temperature) + "Degrees Fahrenheit | " + "Feels Like: " + str(weather.feels_like) + "Degrees Fahrenheit")
         print(f"Precipitation: " + str(weather.precipitation))
         print(f"Wind Speed and Direction: " + str(weather.wind_speed) + "mph | " + str(weather.wind_direction))
